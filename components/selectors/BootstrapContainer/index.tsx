@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Element } from '@craftjs/core';
 import { BootstrapContainerSettings } from './BootstrapContainerSettings';
+import { Text } from '../Text';
 
 type BootstrapContainerProps = {
     className?: string;
@@ -15,7 +16,7 @@ type BootstrapContainerProps = {
 
 export const BootstrapContainer: UserComponent<BootstrapContainerProps> = (props: any) => {
   const {
-    connectors: { connect, drag },
+    connectors: { drag },
   } = useNode((node) => ({
     selected: node.events.selected,
   }));
@@ -29,12 +30,12 @@ export const BootstrapContainer: UserComponent<BootstrapContainerProps> = (props
         style={{
           width: "100%",
           minHeight: "35px",
-          border: "1px black dashed"
         }}
         className={cx([
             className,
         ])}
       >
+        <Text text="Hello there, drop something here." />
       </Element>
     </Container>
   )
