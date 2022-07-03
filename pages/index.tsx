@@ -6,12 +6,15 @@ import React from 'react';
 
 import { Viewport, RenderNode } from '../components/editor';
 import { BootstrapContainer } from '../components/selectors/BootstrapContainer'
+import { BootstrapRow } from '../components/selectors/BootstrapRow'
+import { BootstrapCol } from '../components/selectors/BootstrapCol'
 import { Container, Text } from '../components/selectors';
 import { Button } from '../components/selectors/Button';
 import { Custom1, OnlyButtons } from '../components/selectors/Custom1';
 import { Custom2, Custom2VideoDrop } from '../components/selectors/Custom2';
 import { Custom3, Custom3BtnDrop } from '../components/selectors/Custom3';
 import { Video } from '../components/selectors/Video';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const theme = createMuiTheme({
   typography: {
@@ -51,6 +54,8 @@ function App() {
             Button,
             Video,
             BootstrapContainer,
+            BootstrapRow,
+            BootstrapCol
           }}
           enabled={false}
           onRender={RenderNode}

@@ -1,6 +1,8 @@
 import { Element, useEditor } from '@craftjs/core';
 import { Tooltip } from '@material-ui/core';
+import { BootstrapCol } from 'components/selectors/BootstrapCol';
 import { BootstrapContainer } from 'components/selectors/BootstrapContainer';
+import { BootstrapRow } from 'components/selectors/BootstrapRow';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -98,11 +100,27 @@ export const Toolbox = () => {
           <Tooltip title="Grid" placement="right">
             <Item className="m-2 pb-2 cursor-pointer block" move>
               <i className="bi bi-grid"></i>
-              <p style={{  }}>Row</p>
+              <p style={{ fontSize: 10 }}>Container</p>
+            </Item>
+          </Tooltip>
+        </div>
+        <div ref={(ref) => create(ref, <BootstrapRow />)}>
+          <Tooltip title="Grid" placement="right">
+            <Item className="m-2 pb-2 cursor-pointer block" move>
+              <i className="bi bi-grid"></i>
+              <p style={{ }}>Row</p>
+            </Item>
+          </Tooltip>
+        </div>
+        <div ref={(ref) => create(ref, <BootstrapCol />)}>
+          <Tooltip title="Grid" placement="right">
+            <Item className="m-2 pb-2 cursor-pointer block" move>
+              <i className="bi bi-grid"></i>
+              <p style={{ }}>Col</p>
             </Item>
           </Tooltip>
         </div>
       </div>
     </ToolboxDiv>
   );
-};
+}

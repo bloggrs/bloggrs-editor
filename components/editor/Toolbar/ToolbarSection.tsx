@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
+
 const usePanelStyles = makeStyles((_) => ({
   root: {
     background: 'transparent',
